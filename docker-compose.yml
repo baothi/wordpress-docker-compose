@@ -18,7 +18,14 @@ services:
       - phpmyadmin
     restart: always
     ports:
-        - 80:80
+      - 80:80
+      - 443:443
+    networks:
+      - default # this network (app2)
+      - supply_default # external network (app1)
+    external_links:
+      - supply_web_1:supply_web_1
+
 
   mysql:
     image: mariadb:${MARIADB_VERSION:-latest}
@@ -68,3 +75,8 @@ services:
       - WAIT_HOST_CONNECT_TIMEOUT=${WAIT_HOST_CONNECT_TIMEOUT:-30}
 
 
+networks:
+  default: # this network (app2)
+    driver: bridge
+  supply_default: # external network (app1)
+    external: true
