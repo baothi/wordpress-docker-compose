@@ -5,15 +5,12 @@
 
 Related blog post:
 
-  - [WordPress Local Development Using Docker
-    Compose](https://www.datanovia.com/en/lessons/wordpress-local-development-using-docker-compose/):
-    Deploy Wordpress on localhost using docker
-  - [Docker WordPress Production
-    Deployment](https://www.datanovia.com/en/lessons/docker-wordpress-production-deployment/):
-    Step-by-step guide to deploy WordPress online using docker-compose
+  - WordPress Local Development Using Docker
+    Compose: Deploy Wordpress on localhost using docker
+  - Docker WordPress Production
+    Deployment: Step-by-step guide to deploy WordPress online using docker-compose
   - [Using Docker WordPress Cli to Manage WordPress
-    Websites](https://www.datanovia.com/en/lessons/using-docker-wordpress-cli-to-manage-wordpress-websites/):
-    Commande line interface for managing a WordPress website
+    Websites: Commande line interface for managing a WordPress website
 
 The installation tool kit, provided here, include:
 
@@ -28,7 +25,7 @@ using the following commands:
 
 ``` bash
 # Download a wordpress docker-compose example
-git clone https://github.com/kassambara/wordpress-docker-compose
+git clone https://github.com/baothi/wordpress-docker-compose.git
 cd wordpress-docker-compose
 # Build and start installation
 docker-compose up -d --build
@@ -59,9 +56,4 @@ docker-compose down
 rm -rf certs/* certs-data/* logs/nginx/* mysql/* wordpress/*
 ```
 
-## References
 
-  - [WordPress: with Nginx web server in
-    Docker](https://github.com/mjstealey/wordpress-nginx-docker)
-  - [Quickstart: Compose and
-    WordPress](https://docs.docker.com/compose/wordpress/)
